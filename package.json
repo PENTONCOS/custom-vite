@@ -1,0 +1,27 @@
+{
+	"name": "custom-vite",
+	"version": "1.0.0",
+	"description": "【doing】小小实现一下 vite 的基础能力",
+	"main": "index.js",
+	"type": "module",
+	"bin": {
+		"custom-vite": "./bin/vite.js"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PENTONCOS/custom-vite.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/PENTONCOS/custom-vite/issues"
+	},
+	"homepage": "https://github.com/PENTONCOS/custom-vite#readme",
+	"dependencies": {
+		"connect": "^3.7.0",
+		"serve-static": "^1.15.0"
+	}
+}

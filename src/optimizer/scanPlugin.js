@@ -54,9 +54,7 @@ async function esbuildScanPlugin(config, depImports) {
 			build.onLoad({ filter: htmlTypesRe, namespace: 'html' }, async ({ path }) => {
 				// 将 HTML 文件转化为 js 入口文件
 				const htmlContent = fs.readFileSync(path, 'utf-8');
-				console.log(htmlContent, 'htmlContent'); // htmlContent 为读取的 html 字符串
 				const [, src] = htmlContent.match(scriptModuleRe);
-				console.log('匹配到的 src 内容', src); // 获取匹配到的 src 路径：/main.js
 				const jsContent = `import ${JSON.stringify(src)}`;
 				return {
 					contents: jsContent,

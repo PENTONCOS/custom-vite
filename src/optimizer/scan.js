@@ -6,7 +6,7 @@ async function scanImports(config) {
 	// 保存扫描到的依赖
 	const depImports = {};
 	// 创建 Esbuild 扫描插件
-	const scanPlugin = await esbuildScanPlugin();
+	const scanPlugin = await esbuildScanPlugin(config, depImports);
 
 	// 借助 EsBuild 进行依赖预构建
 	await build({

@@ -38,7 +38,7 @@ async function esbuildScanPlugin(config, depImports) {
 				if (resolved) {
 					const id = resolved.id || resolved;
 					if (id.includes('node_modules')) {
-						desImports[path] = id;
+						depImports[path] = id;
 						return {
 							path: id,
 							external: true
